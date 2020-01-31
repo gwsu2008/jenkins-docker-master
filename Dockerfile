@@ -13,6 +13,6 @@ RUN apt-get update && \
     stable" && \
     apt-get update && \
     apt-get -y install docker-ce
-COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 RUN usermod -a -G docker jenkins
+COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 USER jenkins
